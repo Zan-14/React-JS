@@ -1,10 +1,12 @@
 function App() {
-
   return (
     <>
-    <h1 className="bg-black text-white text-3xl text-center">Learn React JS</h1>
+      <h1 className="bg-black text-white text-3xl text-center">
+        Learn React JS
+      </h1>
+      <p className="p-5 text-red-700 text-center ">Hello from the other side</p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
