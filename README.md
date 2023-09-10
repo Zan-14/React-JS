@@ -1,3 +1,7 @@
+GitHub Kak Arie
+Materi React JS
+https://github.com/syukronarie/harisenin
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
