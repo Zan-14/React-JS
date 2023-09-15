@@ -1,0 +1,36 @@
+Main materials:
+1. Session 21 React JS Part 1 PDF HariSenin bootcamp
+2. Tutorial REACT "Paling Masuk Akal" untuk PEMULA (last progress : 55.00)
+    link: https://youtu.be/kcnwI_5nKyA?list=PLFIM0718LjIUu3X2zYNqomEWs3sYd-fV1&t=2795
+
+TYPE:
+
+npm run dev 
+
+on the terminal before working. The function is similar to the live server version in HTML
+
+My Summary:
+
+*GENERAL
+-Component in React is similar to <div> in HTML
+-We create a lot of <div> elements to make a whole page (maybe with semantic like header, main, section, etc. But generally these are <div>)
+-Creating a whole page in React is actually put some components together. These components maybe like header, hero-section, footer, main-content, articles, etc.
+-These components will be used and exported in the app.jsx file.
+
+*Parent and child components in React
+- App.jsx is actually a parent component. So a huge component because it will contain all of the other components inside it before the main.jsx render it into HTML. We can call App.jsx as a main parent component.
+- On the other hand, we create some components like main-section.jsx, hero-section.jsx, article.jsx, list-articles.jsx for example. the role will be like this:
+    > parent component : 
+    1. main-section.jsx, because inside it we will import or put hero-section.jsx and article.jsx and maybe other components as well.
+    2.article.jsx, because inside it we will import list-articles.jsx. We want article.jsx as the template form of the article, and then the list-articles.jsx will provide the source or data of the articles.
+
+    > child component :
+    1. hero-section.jsx, because we put this into main-section.jsx
+    2. article.jsx, because we put this into main-section.jsx
+    3. list-article.jsx, because we use it inside the article.jsx
+
+Conclusion: It's relative to a component become a parent component or a child component. article.jsx is a parent component to list-articles.jsx, but is a child component to main-section.jsx
+
+*Reusable components
+- these components (list-article, article, form, navbar, footer) can be used repeatly and MODIFIED without changing the source or data of the components. Example: we want to use article.jsx twice inside the main-section.jsx but with different styles and data sources. We can do it without creating something like article1.jsx and article2.jsx
+
