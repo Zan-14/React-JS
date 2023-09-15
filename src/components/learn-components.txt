@@ -34,3 +34,6 @@ Conclusion: It's relative to a component become a parent component or a child co
 *Reusable components
 - these components (list-article, article, form, navbar, footer) can be used repeatly and MODIFIED without changing the source or data of the components. Example: we want to use article.jsx twice inside the main-section.jsx but with different styles and data sources. We can do it without creating something like article1.jsx and article2.jsx
 
+Warning! 
+The name of the component file and the component function can be different. To use / import a component, you need to use the function name, not the file name.
+
