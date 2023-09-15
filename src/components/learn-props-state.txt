@@ -1,0 +1,63 @@
+~PROP~
+
+Main materials:
+1. Session 21 React JS Part 1 PDF HariSenin bootcamp
+2. Tutorial REACT "Paling Masuk Akal" untuk PEMULA
+    link: https://youtu.be/kcnwI_5nKyA?list=PLLcFl6va6PSIttmc5t1ATCax3sl-vMJlH&t=3237
+
+
+*props in React
+- We use props to be able to use a same component but with different content or data inside.
+
+
+*props refactor
+syntax:
+function NavBar({ name }) {
+  return (
+    <nav>
+      <div>
+        <div>
+          <span>{name ? name : "Projects"}</span>
+        </div>
+      </div>
+    </nav>
+  );
+}
+export default NavBar;
+
+- From the syntax above, we add {name} inside the () function to give a "name-tag".
+- Then when we want to change somepart of the component, we use ternary operator. (inside the <span>).
+- When we add this component to another component, we can just put <NavBar /> this to show the default value which is "Projects" because it's false. 
+- But, when we put <NavBar name="Exit"/>, the "Projects" will change to "Exit". Because the name property and the value is true.
+- We can change the property name, that is not always "name". We can call it lastOption, id, items, etc.
+
+
+*property key
+- When we need to show an array data in a list, for example, we need to loop the <li> element with key property.  
+syntax:
+      <ul>
+        {usersData.map(user => (
+          <li key={user}>{user}</li>
+        ))}
+      </ul>
+
+Example: we use map method to loop the <li> element. After that, we need to add key inside the <li> element. The naming rule is not always the same as the item or data that we want to show. So if you want to change the syntax to:
+        {usersData.map(user => (
+          <li key={uniqueKey1}>{user}</li>
+        ))}
+this also is correct. (naming the key different from the user/item also add a benefit when there are some simillar data in the array).
+
+
+*prop validation with propTypes
+(I still don't get this part)
+
+
+
+~STATE~
+
+Main materials:
+1. Session 21 React JS Part 1 PDF HariSenin bootcamp
+2. Tutorial REACT "Paling Masuk Akal" untuk PEMULA (last progress : 1:03:21)
+    link: https://youtu.be/kcnwI_5nKyA?list=PLLcFl6va6PSIttmc5t1ATCax3sl-vMJlH&t=3799
+
+*Adding interactivity with state

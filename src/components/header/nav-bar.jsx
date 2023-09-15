@@ -1,4 +1,4 @@
-function NavBar() {
+function NavBar({ name }) {
   return (
     <nav>
       <div className="flex items-center justify-between font-semibold">
@@ -8,7 +8,9 @@ function NavBar() {
         <div className="flex gap-5">
           <span>About</span>
           <span>Contact</span>
-          <span>Projects</span>
+          {/* look at header.jsx and don't mind the problem yet*/}
+          {/* {This using ternary operator} */}
+          <span>{name ? name : "Projects"}</span>
         </div>
       </div>
     </nav>

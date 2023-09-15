@@ -6,7 +6,8 @@ function Header() {
     <header>
       <div className="bg-yellow-600 p-5">
         {/* this is how to import the component */}
-        <NavBar />
+        {/* same component but a little different information */}
+        <NavBar name="Exit" />
       </div>
     </header>
   );

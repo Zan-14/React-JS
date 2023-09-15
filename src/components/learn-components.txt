@@ -1,6 +1,6 @@
 Main materials:
 1. Session 21 React JS Part 1 PDF HariSenin bootcamp
-2. Tutorial REACT "Paling Masuk Akal" untuk PEMULA (last progress : 55.00)
+2. Tutorial REACT "Paling Masuk Akal" untuk PEMULA
     link: https://youtu.be/kcnwI_5nKyA?list=PLFIM0718LjIUu3X2zYNqomEWs3sYd-fV1&t=2795
 
 TYPE:

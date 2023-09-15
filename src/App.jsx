@@ -1,4 +1,5 @@
 import Header from "./components/header/header";
+import HeroSection from "./components/hero-section/hero-section";
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
             Learn React JS
           </h1>
         </div>
+        {/* reusable components */}
         <Header />
+        <HeroSection />
       </div>
     </>
   );
