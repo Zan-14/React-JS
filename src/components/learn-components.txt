@@ -41,4 +41,5 @@ The name of the component file and the component function can be different. To u
 
 *Create multiple components inside a single parent component file
 Look at state-2.jsx file
-- 
+- main component use export default below the function
+- other component inside the main component file use export and placed before the function name
