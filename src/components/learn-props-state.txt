@@ -32,7 +32,7 @@ export default NavBar;
 - We can change the property name, that is not always "name". We can call it lastOption, id, items, etc.
 
 
-*property key
+*prop / property / attribute key
 - When we need to show an array data in a list, for example, we need to loop the <li> element with key property.  
 syntax:
       <ul>
@@ -61,3 +61,19 @@ Main materials:
     link: https://youtu.be/kcnwI_5nKyA?list=PLLcFl6va6PSIttmc5t1ATCax3sl-vMJlH&t=3799
 
 *Adding interactivity with state
+- in HTML and Javascript, we know about attribute onClick, scrollY, etc to trigger an event or addEventListener in Javascript. 
+- React also has the same with state. State will modifiy or change the data according to the state that we added.
+- the default way to add state is:
+const state = React.useState();
+
+*Example of a simple state
+- From the simple state syntax above, we need to know the details.
+    1. state beside const needs to be typed as an array with 2 values. > [a, b]
+    2. a is a starting value of the state and the value can change. b is a function that will change the a value.
+- The naming suggestion for a and b is:
+    a = name of the state value and you can name it anything you like (with camelCase)
+    b = same with a but adding "set" before the a name
+    example:
+    const [likes, setLikes] = React.useState();
+- Place the state const between component function and return()
+    example: Look at state-practice1.jsx file

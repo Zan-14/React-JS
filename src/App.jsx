@@ -1,7 +1,13 @@
+// This is how to import multiple components from a single parent component
+import LikeButtons, {
+  MinButtons,
+  ResetButtons,
+} from "./components/button/state-2";
 import Header from "./components/header/header";
 import HeroSection from "./components/hero-section/hero-section";
 
-function App() {
+// the other way to type a function. So below is similar to function App() {}
+const App = () => {
   return (
     <>
       <div>
@@ -12,10 +18,18 @@ function App() {
         </div>
         {/* reusable components */}
         <Header />
-        <HeroSection />
+        <main>
+          <HeroSection />
+        </main>
+        {/* This is how to import multiple components from a single parent component */}
+        <div className="flex justify-center py-5">
+          <MinButtons />
+          <LikeButtons />
+          <ResetButtons />
+        </div>
       </div>
     </>
   );
-}
+};
 
 export default App;

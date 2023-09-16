@@ -16,6 +16,7 @@ My Summary:
 -We create a lot of <div> elements to make a whole page (maybe with semantic like header, main, section, etc. But generally these are <div>)
 -Creating a whole page in React is actually put some components together. These components maybe like header, hero-section, footer, main-content, articles, etc.
 -These components will be used and exported in the app.jsx file.
+-Name of the component must be Uppercase at the first letter.
 
 *Parent and child components in React
 - App.jsx is actually a parent component. So a huge component because it will contain all of the other components inside it before the main.jsx render it into HTML. We can call App.jsx as a main parent component.
@@ -37,3 +38,7 @@ Conclusion: It's relative to a component become a parent component or a child co
 Warning! 
 The name of the component file and the component function can be different. To use / import a component, you need to use the function name, not the file name.
 
+
+*Create multiple components inside a single parent component file
+Look at state-2.jsx file
+- 
