@@ -1,3 +1,5 @@
+Main materials/Tutorial: https://www.youtube.com/watch?v=RVH_5L5Lsp0&list=PLFIM0718LjIUu3X2zYNqomEWs3sYd-fV1&index=2
+
 We are using Vite (pronounce = vit , not vait or VITE)
 official web : vitejs.dev
 
