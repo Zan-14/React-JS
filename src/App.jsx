@@ -1,8 +1,13 @@
+import { useState } from "react";
 import Header from "./components/header/header";
-import RenderList from "./components/renderingList-Portals/renderingList";
+import RenderList from "./components/renderingList/renderingList";
+// Import this to create portals
+import { createPortal } from "react-dom";
 
 // the other way to type a function. So below is similar to function App() {}
 const App = () => {
+  // type the state first
+  const [isActive, setIsActive] = useState(false);
   return (
     <>
       <div>
@@ -21,6 +26,21 @@ const App = () => {
         <RenderList />
         <div>
           <h3 className="text-2xl text-center">2. Portals</h3>
+        </div>
+        {/* this button will add element outside the <div id="root"> */}
+        <div className="flex justify-center my-5">
+          <button
+            onClick={() => setIsActive(!isActive)}
+            className="px-3 py-2 bg-yellow-200 border-black border-2"
+          >
+            Press to add paragraph
+          </button>
+          {isActive
+            ? createPortal(
+                <p>This paragraph is generated outside the div root</p>,
+                document.body
+              )
+            : null}
         </div>
       </div>
     </>

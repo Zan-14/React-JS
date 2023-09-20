@@ -1,4 +1,4 @@
-*Rendering List and Portals
+*Rendering List
 
 *Remember about array and object including the methods and prototypes in javascript
 *Using key prop to render data list (a few way to do it)

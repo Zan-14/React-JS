@@ -23,7 +23,7 @@ const RenderList = () => {
     },
   ];
   return (
-    <div className="mx-5 flex flex-wrap">
+    <div className="mx-5 flex flex-wrap justify-center">
       <table className="m-5 border-4 border-separate border-black">
         <thead>
           <tr>
