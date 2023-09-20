@@ -1,31 +1,18 @@
-Try to learn React!
+*REACT JS PART 2*
 
-Progress:
-
-1. Watch video from Mr. Sandhika Galih (Web Programming UNPAS)
-Tutorial REACT "Paling Masuk Akal" untuk PEMULA (progress = section 5 = 46.35)
-https://www.youtube.com/watch?v=kcnwI_5nKyA&list=PLLcFl6va6PSIttmc5t1ATCax3sl-vMJlH&index=5
-- Read React documentation from Next.JS web and React.dev/learn = This will cover the basic and 80% daily usage of React (Important!)
-- Try to learn more about JavaScript Native / Vanilla
-- Understand these materials before starting to learn React (checklist all of this first!):
-    a. HTML & CSS (Tailwind) ✅
-    b. JavaScript Fundamentals = array, object, manipulation, looping, function, etc.. <on progress>
-    c. DOM <on progress>
-    d. Modern JavaScript (ES6) <on progress>:
-        - ES6 Variables (let and const = how to use them correctly)
-        - Functions & Arrow Functions
-        - Objects & Classes (Prototype inheritance?)
-        - Arrays & Array Methods (Hire order function??)
-        - Destructuring (Change objects and arrays into different form)
-        - Template literals???
-        - Ternary Operators?? (different form of if else statements)
-        - ES Modules & Import / Export Syntax (Module system)
-    e. Git & CLI (Command Line Interface) <Almost ✅>
-    f. Package Manager (NodeJS + NPM)
+Topic : 
+1. Component Lifecycle
+2. Rendering List and Portals
 
 
-2. Editor Set up 
-- Linter = ESLint (what is it, how to use it, and how to configure it?)
-- Prettier (what is it, how to use it, and how to configure it)
-- React Developer tools Browser extension ✅
+*Pro and Cons from reusable components:
 
+1. Pro
+    - Can be used as template, for example: styling format, component like buttons (including the function of the button), etc.
+
+2. Cons
+    - If the component  has same format but different data each time it is rendered, there will be many conditions stacked.
+    This will create too many props on one reusable component.
+    Example: Cards with different image, different color, different text/content.
+Solution:
+    - Its ok to create a component that only we use once event though the format is similar with other components. This will avoid too many props on a component.

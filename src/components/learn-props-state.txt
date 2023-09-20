@@ -60,6 +60,9 @@ Main materials:
 2. Tutorial REACT "Paling Masuk Akal" untuk PEMULA (last progress : 1:03:21)
     link: https://youtu.be/kcnwI_5nKyA?list=PLLcFl6va6PSIttmc5t1ATCax3sl-vMJlH&t=3799
 
+*State / useState is ONE OF the popular Hooks in React
+- Learn other hooks in React!
+
 *Adding interactivity with state
 - in HTML and Javascript, we know about attribute onClick, scrollY, etc to trigger an event or addEventListener in Javascript. 
 - React also has the same with state. State will modifiy or change the data according to the state that we added.
