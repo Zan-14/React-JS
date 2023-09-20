@@ -12,7 +12,16 @@ const App = () => {
           </h1>
         </div>
         <Header />
-        <RenderList className="my-5" />
+        <div>
+          <h2 className="bg-blue-500 text-white text-2xl text-center">
+            RENDER LIST & PORTALS
+          </h2>
+          <h3 className="text-2xl text-center">1. Rendering list</h3>
+        </div>
+        <RenderList />
+        <div>
+          <h3 className="text-2xl text-center">2. Portals</h3>
+        </div>
       </div>
     </>
   );
