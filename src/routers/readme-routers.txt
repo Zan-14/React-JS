@@ -64,8 +64,6 @@ https://reactrouter.com/en/main
     13. If you have some element inside App other than <Routers />, the element will not change even though you have moved to the other page.
 
 
-    
-
 2. What is React Router DOM?
     - React router is a way to navigate or move between end points, example:
         - We have an App or web, There are multiple pages in the App. We need to connect between the pages (login, landing page, profile page, etc)
@@ -89,3 +87,47 @@ https://reactrouter.com/en/main
             example: 
             1. Login page (before the user is logged in)
             2. User can only see the homepage that show some information about the product
+    
+    b. Create login-page.jsx inside the pages folder
+    c. Inside the file, type rafce and create the routing inside index.jsx
+
+    d. Create a <form onSubmit={}> with input username, password, and a button with type="submit" inside it.
+        note: onSubmit={} value will be added later.
+
+    e. Create useNavigate above return()
+        const navigate = useNavigate();
+            note: import useNavigate from react-router-dom
+
+    f. Create arrow function for handleSubmit
+        *Inside it, add:
+            - e.preventDefault();
+            - const formData = new FormData(e.target)
+            - const {username, password} = Object.fromEntries(formData);
+            - fetch the authentication code from dummyjson.com > Auth > Login and get token
+                > Edit:
+                    - username
+                    - password
+                    - delete // optional line
+                    - replace:
+                        .then(res => res.json())
+                        .then(console.log);
+                        to:
+                        .then(async res => {
+                            if (res.status === 400)
+                                return alert("Enter the correct username and password");
+                            return navigate("/");
+                        });
+    
+    g. Add handleSubmit into the form:
+        <form onSubmit={handleSubmit}>
+
+*Settings for private router and protected router (Start from 1:34:45)
+    >Condition:
+        - path="/" or home-page and product-detail-page are only accessible when the user is logged in
+        - the user cannot go back to the login page after login by changing the URL to /login.
+        - The user cannot access home-page and product-detail-page without login event though they type the URL. Typing the URL without login will direct the user to a new blank page with text "Unauthorized 401" and a button to direct the user to login-page again.
+    
+    a. Open private-route.jsx and create the template (type rafc) (create the file if doesn't exist)
+
+    b. Create a folder named utils and a file auth.js inside the folder
+    c. 

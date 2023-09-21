@@ -13,7 +13,6 @@ const App = () => {
         <h2 className="bg-green-800 text-white text-2xl text-center">
           Error Handling, Event Handling, Routers
         </h2>
-        <h3 className="text-2xl text-center">1. Router</h3>
       </div>
       <Routers />
     </>
