@@ -1,4 +1,4 @@
-*REACT JS PART 2*
+*REACT JS PART 3*
 
 Topic : 
 1. Component Lifecycle
