@@ -1,24 +1,21 @@
-// import { useEffect, useState } from "react";
-import Header from "./components/header/header";
+import Routers from "./routers";
 
 // the other way to type a function. So below is similar to function App() {}
 const App = () => {
   return (
     <>
       <div>
-        <div>
-          <h1 className="bg-black text-white text-3xl text-center">
-            Learn React JS
-          </h1>
-        </div>
-        <Header />
-        <div>
-          <h2 className="bg-blue-500 text-white text-2xl text-center">
-            RENDER LIST & PORTALS
-          </h2>
-          <h3 className="text-2xl text-center">1. Rendering list</h3>
-        </div>
+        <h1 className="bg-black text-white text-3xl text-center">
+          Learn React JS
+        </h1>
       </div>
+      <div>
+        <h2 className="bg-green-800 text-white text-2xl text-center">
+          Error Handling, Event Handling, Routers
+        </h2>
+        <h3 className="text-2xl text-center">1. Router</h3>
+      </div>
+      <Routers />
     </>
   );
 };

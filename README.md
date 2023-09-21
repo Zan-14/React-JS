@@ -2,6 +2,10 @@ GitHub Kak Arie
 Materi React JS
 https://github.com/syukronarie/harisenin
 
+Random Knowledge:
+
+1. Extention .jsx means JavaScript XML
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
