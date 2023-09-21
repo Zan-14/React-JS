@@ -71,10 +71,21 @@ https://reactrouter.com/en/main
         - We have an App or web, There are multiple pages in the App. We need to connect between the pages (login, landing page, profile page, etc)
         - We can create a multiple pages inside the App.jsx only. That is needed because that file will only generate a single HTML page. That's why router is important.
 
-3. Study Case: Authentication with login
+
+3. Implementing fetch in Authentication feature(login)
+    visit: https://dummyjson.com/docs/auth
+
+    Condition:
+    - We want to add a login feature in the application, and after that the users will be redirected to the homepage
+    - The user will have unique token
+    - The user cannot go back to login page after successful login (by changing the URL for example) before click log out button
+
+*Study Case: Authentication with login
     a. Create 2 new files inside router, which are private-route.jsx and protected-route.jsx (public-route)
         Note:
-        - Private route: After log in
+        - Private route: After log in (or need credential or permission first)
             example: user can click the details and buy the product after login
-        - Public route: Without login
-            example: user can only see the homepage that show some information about the product
+        - Public route or protected route: Without login / public
+            example: 
+            1. Login page (before the user is logged in)
+            2. User can only see the homepage that show some information about the product
