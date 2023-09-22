@@ -11,7 +11,7 @@ const App = () => {
       </div>
       <div>
         <h2 className="bg-green-800 text-white text-2xl text-center">
-          Error Handling, Event Handling, Routers
+          Hooks, Refs and The Dom
         </h2>
       </div>
       <Routers />

@@ -1,12 +1,8 @@
+Learn React JS part 4
 TOPIC:
 
-- The Purpose of using Vite in React
-
-1. Routers
-2. How to use (fetch) JSON files in React
-3. Implementing fetch in Authentication feature(login)
-4. Event Handling
-5. Error Handling
+- Hooks
+- Refs and The Dom
 
 GitHub Kak Arie
 Materi React JS
