@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
+import auth from "../../utils/auth";
 
 const Homepage = () => {
   const [state, setState] = useState();
+
   useEffect(() => {
     // fetch data from dummy JSON
     fetch("https://dummyjson.com/products")
@@ -15,9 +17,14 @@ const Homepage = () => {
     <div>
       <h1 className="text-center font-bold text-xl bg-gray-300">Homepage</h1>
       <p className="text-center">from homepage.jsx</p>
-      <div className="text-center p-4 bg-cyan-400">
-        <Link to="/contact">Go to Contact Us</Link> <br />
-        <Link to="/details">Go to Product Details</Link>
+      <div className="text-center py-5">
+        {/* button to logout, include removing the token */}
+        <button
+          onClick={() => auth.logout()}
+          className="bg-slate-200 rounded-lg px-3 py-2 "
+        >
+          Logout
+        </button>
       </div>
       <h3 className="text-center font-bold text-xl bg-gray-300">
         Sample Products

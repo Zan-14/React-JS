@@ -1,3 +1,13 @@
+TOPIC:
+
+- The Purpose of using Vite in React
+
+1. Routers
+2. How to use (fetch) JSON files in React
+3. Implementing fetch in Authentication feature(login)
+4. Event Handling
+5. Error Handling
+
 GitHub Kak Arie
 Materi React JS
 https://github.com/syukronarie/harisenin

@@ -21,7 +21,6 @@ const ProductDetailsPage = () => {
       </h1>
       <p className="text-center">from product-details-page.jsx</p>
       <div className="text-center p-4 bg-cyan-400">
-        <Link to="/contact">Go to Contact Us</Link> <br />
         <Link to="/">Go to Homepage</Link>
       </div>
       {/* add ternary operator here, same with home-page with a little tweaks and without the map looping*/}

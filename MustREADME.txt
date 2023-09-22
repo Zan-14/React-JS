@@ -1,4 +1,4 @@
-*REACT JS PART 3* (last: 1:34:45)
+*REACT JS PART 3*
 
 Topic : 
 0. The Purpose of using Vite in React
@@ -51,3 +51,20 @@ Topic :
 4. Event Handling
     - Every event or interaction that happen in the web like click, right-click, scroll, double-click, block, hover, submit, zoom-in/out, etc. That's why in JavaScript, there is addEventListener to create the effect of the interaction.
     - Open login-page.jsx and read / follow number 3, Creating login feature is also applying event handle like onSubmit in form element.
+    - Open event on MDN to know list of Event listening
+
+5. Error handling
+    - Related to how to handle the data by using:
+        a. Nullish operator,
+        b. AND logic,
+        c. Ternary operator,
+        d. Optional chaining operator,
+            - This operator is used to prevent the App crash or error.
+            - Usually happen when we want to call a data from array or function but the data actually doesn't exist.
+
+*Random Question:
+    1. How to do Microservices in React?
+        - React is not the way to handle Microservices
+        - There is a term called Micro Frontends, which is a few frameworks that work together to handle some Apps (Micro Apps)
+        visit this to know the explanation in image
+        https://www.google.com/search?sca_esv=567469796&rlz=1C1CHZN_enID968ID968&sxsrf=AM9HkKlYGhYzzqBZGwnX2VKEJMMR-HntRQ:1695352063466&q=micro+frontend&tbm=isch&source=lnms&sa=X&sqi=2&ved=2ahUKEwiC_YvMnr2BAxXUfGwGHY82DzEQ0pQJegQIDBAB&biw=958&bih=961&dpr=1

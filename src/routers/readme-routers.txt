@@ -121,13 +121,148 @@ https://reactrouter.com/en/main
     g. Add handleSubmit into the form:
         <form onSubmit={handleSubmit}>
 
-*Settings for private router and protected router (Start from 1:34:45)
+*Settings for private route and protected route (Start from 1:34:45)
     >Condition:
-        - path="/" or home-page and product-detail-page are only accessible when the user is logged in
+        - path="/" or home-page and path="/details/:id or product-detail-page are only accessible when the user is logged in (private route)
         - the user cannot go back to the login page after login by changing the URL to /login.
-        - The user cannot access home-page and product-detail-page without login event though they type the URL. Typing the URL without login will direct the user to a new blank page with text "Unauthorized 401" and a button to direct the user to login-page again.
+        - The user cannot access home-page and product-detail-page without login event though they type the URL (adding "/" or "/details/:id). Typing the URL without login will direct the user to a new blank page with text "Unauthorized 401" and a button to direct the user to login-page again.
     
-    a. Open private-route.jsx and create the template (type rafc) (create the file if doesn't exist)
+    >Private Route (until 1:53:10):
+        a. Open private-route.jsx and create the template (type rafc) (create the file if doesn't exist)
+            - Open index.jsx and wrap home-page and product-detail-page inside the private-route.jsx
+            syntax:
+            <Route path="/" element={<PrivateRoute />}>
+                <Route index element={<Homepage />} />
+                <Route path="/details/:id" element={<ProductDetailsPage />} />
+            </Route>
 
-    b. Create a folder named utils and a file auth.js inside the folder
-    c. 
+        b. Create a folder named utils and a file auth.js inside the folder
+        c. install js-cookie on terminal:
+            npm i js-cookie
+        d. Add this inside auth.js:
+            - import Cookies from "js-cookie";
+            - get and set the cookies.
+            Syntax:
+                import Cookies from "js-cookie";
+
+                const auth = {
+                    isAuthenticated () {
+                        return Cookies.get('token');
+                    }, 
+                    storeAuthCredential: (token) => {
+                        return Cookies.set("token", token);
+                    },
+                };
+
+                export default auth;
+        
+        e. Open login-page.jsx and do:
+            - import auth from "../../utils/auth";
+            - await response json in const token; (below if)
+            - put auth.storeAuthCredential(token);
+            Syntax:
+                .then(async res => {
+                    if (res.status === 400)
+                        return alert("Enter the correct username and password");
+                    const { token } = await res.json();
+                    auth.storeAuthCredential(token);
+                    return navigate("/");
+                });
+            note: this section using asynchronous javascript (async / await function)
+
+        f. Open private-route.jsx and do:
+            - import auth from "../../utils/auth";
+            - import UnauthorizedPage
+            - import { Outlet } from "react-router-dom";
+            - Call the auth with if / conditional rendering
+            - Create a condition when auth.isAuthenticated() is true, open "/" and if it's false, open a new page (unauthorized-page.jsx). Create the page inside pages folder if the page is not exist yet.
+            Syntax:
+                import { Outlet } from "react-router-dom";
+                import { UnauthorizedPage } from "../components/pages/unauthorized-page";
+                import auth from "../utils/auth";
+
+                export const PrivateRoute = () => {
+                    if (auth.isAuthenticated()) 
+                        return <Outlet />;
+
+                    return <UnauthorizedPage />;
+                };
+        g. Open unauthorized-page.jsx, create the template, and add link to the login-page.jsx
+            syntax:
+                import { Link } from "react-router-dom";
+
+                export const UnauthorizedPage = () => {
+                    return (
+                        <div>
+                        <h1 className="py-5 text-3xl font-bold text-center">ACCESS DENIED</h1>
+                        <h1 className="py-5 text-2xl font-bold text-center">401</h1>
+                        <div className="flex justify-center items-center">
+                            <Link to={"/login"}>
+                            <button className="bg-yellow-300 px-5 py-2 rounded-xl font-semibold hover:bg-blue-300">
+                                Login
+                            </button>
+                            </Link>
+                        </div>
+                        </div>
+                    );
+                };
+                Note: don't mind the className, It's just for styling purposes
+
+        f. Create a logout utils inside auth.js
+            - Open auth.js
+            - Below storeAuthCredential add logout function that will remove cookies and redirected to login page.
+            syntax:
+                logout () {
+                    Cookies.remove("token");
+                    window.location.href = "/login";
+                }
+        g. Create a button in homepage to logout
+            syntax:
+                <button
+                    onClick={() => auth.logout()}
+                    className="bg-slate-200 rounded-lg px-3 py-2 "
+                >
+                    Logout
+                </button>
+            note: import auth from auth.js first
+
+        Note: At this point, the first page that user will be shown is unauthorized-page.
+            - User can login and get the token. Then the user will be directed to the home-page. 
+            - User can click logout button in the homepage and remove the token.
+                Also will be directed to the login-page 
+            - User who hasn't loggged in yet can't access home-page(even when they try to change the URL).
+            - User can still go to login-page (by typing the URL) after successful login. This will be fix in the protected route.
+    
+    >Protected route
+        a. Open protected-route.jsx and create the template
+        b. Same with private-route, we use if / conditional rendering but inside the if is the opposite of private-route. The return also different from private-route, because we want the user who has logged in cannot access login-page. 
+            Syntax:
+                import { Navigate, Outlet } from "react-router-dom";
+                import auth from "../utils/auth";
+
+                export const ProtectedRoute = () => {
+                // the opposite of the private route by addint ! before auth
+                    if (!auth.isAuthenticated()) return <Outlet />;
+
+                    return <PrivateRoute />;
+                    // or
+                    return <Navigate to="/" />;
+                };
+            Note: If PrivateRoute is used, import the page first. If Navigate is used, import navigate first.
+
+        c. Setup the protected router in Index.jsx
+            - Wrap login page inside protected route
+            syntax:
+                <Route path="/" element={<ProtectedRoute />}>
+                    <Route path="/login" element={<LoginPage />} />
+                </Route>
+
+    *DONE
+
+*Why using js-cookie or Cookies?
+    - Server can read cookies
+    - Expired time also can be implemented (user will lost the token after certain amout of time)
+    - The other way is to use session, so when the user close the page, they must login again.
+
+*Manipulate the URL
+    If we want to manipulate the URL when searching or clicking product detail, we can use params (watch Session 23 React JS Part 3 => 1:57:00 )
