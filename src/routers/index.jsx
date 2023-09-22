@@ -7,6 +7,8 @@ import LoginPage from "../components/pages/login-page";
 import { UnauthorizedPage } from "../components/pages/unauthorized-page";
 import { PrivateRoute } from "./private-route";
 import { ProtectedRoute } from "./protected-route";
+import { Part4React } from "../components/pages/part-4-reactjs";
+import { UseReducerPage } from "../components/pages/useReducer-page";
 
 const Routers = () => {
   return (
@@ -21,7 +23,8 @@ const Routers = () => {
         <Route path="/login" element={<LoginPage />} />
       </Route>
       <Route path="/unauthorized" element={<UnauthorizedPage />} />
-      {/* <Route path="/contact" element={<ContactPage />} /> */}
+      <Route path="/part-4" element={<Part4React />} />
+      <Route path="/usereducer" element={<UseReducerPage />} />
     </Routes>
   );
 };

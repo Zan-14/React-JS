@@ -1,6 +1,6 @@
 // import React from 'react'
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../utils/auth";
 
 const LoginPage = () => {
@@ -54,6 +54,13 @@ const LoginPage = () => {
           Login
         </button>
       </form>
+      <div className="flex justify-center my-10">
+        <Link to={"/part-4"}>
+          <button className="bg-yellow-300 px-5 py-2 rounded-xl font-semibold hover:bg-blue-300">
+            Part 4 React
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

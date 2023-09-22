@@ -14,6 +14,13 @@ export const UnauthorizedPage = () => {
           </button>
         </Link>
       </div>
+      <div className="flex justify-center items-center my-5">
+        <Link to={"/part-4"}>
+          <button className="bg-green-300 px-5 py-2 rounded-xl font-semibold hover:bg-blue-300">
+            GO TO LEARN REACT JS PART 4
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

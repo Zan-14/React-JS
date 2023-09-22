@@ -2,6 +2,9 @@ Learn React JS part 4
 TOPIC:
 
 - Hooks
+
+- Knowlege about id references in primitive data (number, string, boolean) and non primitive data (array, object, nested array / object, or both).
+
 - Refs and The Dom
 
 GitHub Kak Arie
