@@ -1,9 +1,12 @@
-Topic : (last: 50.00)
+Topic : (last: 1:05.00)
+
+ATTENTION: The best source of information and learning is the official website (react.dev) If you are trying to learn or fi nd a solution, please visit the official website!
+
 1. Hooks
 
 *Knowlege about id references in primitive data (number, string, boolean) and non primitive data (array, object, nested array / object, or both).
 
-2. Refs and The Dom 
+2. Refs and The Dom
 
 1. Hooks
     - React has some of the built-in Hooks that we can use. 
@@ -31,17 +34,32 @@ Topic : (last: 50.00)
                     - Remember about array and object methods in JavaScript
                     - Remember about Spread Operator
 
-            2. useReducer
+            2. useReducer (Video time> 58:00)
                 Visit to see full documentation:
                     https://react.dev/reference/react/useReducer
                     to see the example of using useReducer, scroll down to "Basic useReducer examples
+                    or visit:
+                    https://www.freecodecamp.org/news/usereducer-hook-react/
+                The reason useReducer is needed is because when a component uses too many useState, That is not a good indicator. That's why useReducer is used to reduce or make a compact States changes, Why? find the details on:
+                *Comparing useState and useReducer
+                https://react.dev/learn/extracting-state-logic-into-a-reducer#comparing-usestate-and-usereducer
+                
 
                 - useReducer full syntax:
                     const [state, dispatch] = useReducer(reducer, initialArg, init?)
                 - parameters:
                     useReducer(reducer, initialArg, init?)
-                        - init? params is optional, usually just reducer and initialArg
+                        - reducer is a function that has 2 arguments (58:30)
+                            syntax:
+                                const reducerMethod = (state, action) => {
+                                    switch(action.type) {
+                                        *State updates here
+                                    }
+                                }
+                            Note: reducer function use switch case to update the state.
+
                         - initialArg = initial state or default state
+                        - init? params is optional, usually just reducer and initialArg
 
 *Knowlege about id references in primitive data (number, string, boolean) and non primitive data (array, object, nested array / object, or both).
     - This knowledge is important because in real cases, manipulate the data without changing the original data is very crucial. 
@@ -67,3 +85,4 @@ Topic : (last: 50.00)
                         We may use this to make a === b ; true (same id reference)
                             const b = a
                         BUT, DON'T DO THIS, because when we manipulate const b values, const a values also change.
+.
