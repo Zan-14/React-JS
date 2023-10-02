@@ -5,5 +5,9 @@ Topic:
 2. ESLint (Session 25 : 1:19:30)
 
 
-2. ESLint 
-    
+2. ESLint (1:19:30)
+    - Open eslint.org >documentation > getting started 
+    - The main function is to find and fix the JavaScript code
+        - Make the our code consistent and prevents bugs
+    - Use ESLint in development phase (before we build the code)
+    - We can turn on and off the ESLint when we need it.
