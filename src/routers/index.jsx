@@ -9,6 +9,7 @@ import { PrivateRoute } from "./private-route";
 import { ProtectedRoute } from "./protected-route";
 import { Part4React } from "../components/pages/part-4-reactjs";
 import { UseReducerPage } from "../components/pages/useReducer-page";
+import Part5React from "../components/pages/part-5-reactjs";
 
 const Routers = () => {
   return (
@@ -22,8 +23,11 @@ const Routers = () => {
       <Route path="/" element={<ProtectedRoute />}>
         <Route path="/login" element={<LoginPage />} />
       </Route>
+      {/* Free page */}
       <Route path="/unauthorized" element={<UnauthorizedPage />} />
       <Route path="/part-4" element={<Part4React />} />
+      <Route path="/part-5" element={<Part5React />} />
+
       <Route path="/usereducer" element={<UseReducerPage />} />
     </Routes>
   );

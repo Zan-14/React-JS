@@ -82,6 +82,13 @@ export const Part4React = () => {
           </button>
         </Link>
       </div>
+      <div className="flex justify-center my-5">
+        <Link to={"/part-5"}>
+          <button className="bg-yellow-300 px-5 py-2 rounded-xl font-semibold hover:bg-blue-300">
+            Part 5 React JS
+          </button>
+        </Link>
+      </div>
 
       {/* 1. Hooks */}
       {/* useState */}
@@ -93,7 +100,7 @@ export const Part4React = () => {
             onClick={handleClick}
             className="bg-red-200 px-5 py-2 rounded-xl font-semibold hover:bg-blue-300"
           >
-            + 1
+            + 12
           </button>
           <button
             // Must wrap inside a function so that setNumber(0) is not called automatically and enter infinite loop
