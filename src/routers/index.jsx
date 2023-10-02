@@ -10,6 +10,7 @@ import { ProtectedRoute } from "./protected-route";
 import { Part4React } from "../components/pages/part-4-reactjs";
 import { UseReducerPage } from "../components/pages/useReducer-page";
 import Part5React from "../components/pages/part-5-reactjs";
+import Part6Redux from "../components/pages/part-6-redux";
 
 const Routers = () => {
   return (
@@ -27,6 +28,7 @@ const Routers = () => {
       <Route path="/unauthorized" element={<UnauthorizedPage />} />
       <Route path="/part-4" element={<Part4React />} />
       <Route path="/part-5" element={<Part5React />} />
+      <Route path="/part-6" element={<Part6Redux />} />
 
       <Route path="/usereducer" element={<UseReducerPage />} />
     </Routes>
