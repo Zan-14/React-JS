@@ -9,11 +9,6 @@ const App = () => {
           Learn React JS
         </h1>
       </div>
-      <div>
-        <h2 className="bg-green-800 text-white text-2xl text-center">
-          Hooks, Refs and The Dom
-        </h2>
-      </div>
       <Routers />
     </>
   );

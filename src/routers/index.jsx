@@ -11,7 +11,7 @@ import { Part4React } from "../components/pages/part-4-reactjs";
 import { UseReducerPage } from "../components/pages/useReducer-page";
 import Part5React from "../components/pages/part-5-reactjs";
 import Part6Redux from "../components/pages/part-6-redux";
-import Part7Api from "../components/pages/part-7-api";
+import Part7Api from "../components/pages/API/FetchPage";
 
 const Routers = () => {
   return (
