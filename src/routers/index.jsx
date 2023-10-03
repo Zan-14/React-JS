@@ -11,6 +11,7 @@ import { Part4React } from "../components/pages/part-4-reactjs";
 import { UseReducerPage } from "../components/pages/useReducer-page";
 import Part5React from "../components/pages/part-5-reactjs";
 import Part6Redux from "../components/pages/part-6-redux";
+import Part7Api from "../components/pages/part-7-api";
 
 const Routers = () => {
   return (
@@ -29,6 +30,7 @@ const Routers = () => {
       <Route path="/part-4" element={<Part4React />} />
       <Route path="/part-5" element={<Part5React />} />
       <Route path="/part-6" element={<Part6Redux />} />
+      <Route path="/part-7" element={<Part7Api />} />
       <Route path="/usereducer" element={<UseReducerPage />} />
     </Routes>
   );

@@ -28,6 +28,13 @@ export const UnauthorizedPage = () => {
           </button>
         </Link>
       </div>
+      <div className="flex justify-center items-center my-5">
+        <Link to={"/part-7"}>
+          <button className="bg-pink-300 px-5 py-2 rounded-xl font-semibold hover:bg-blue-300">
+            REACT JS PART 7 API
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
