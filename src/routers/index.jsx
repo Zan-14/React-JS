@@ -29,7 +29,6 @@ const Routers = () => {
       <Route path="/part-4" element={<Part4React />} />
       <Route path="/part-5" element={<Part5React />} />
       <Route path="/part-6" element={<Part6Redux />} />
-
       <Route path="/usereducer" element={<UseReducerPage />} />
     </Routes>
   );
