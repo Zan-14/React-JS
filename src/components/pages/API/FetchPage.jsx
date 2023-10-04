@@ -83,6 +83,7 @@ const Part7Api = () => {
     } else {
       getApiProduct();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCategory]);
 
   return (
