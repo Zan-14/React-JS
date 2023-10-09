@@ -1,6 +1,7 @@
 *REACT JS PART 7*
-Session 27 HariSenin Bootcamp (last: 1:17:56)
-Kak Rizal
+Session 27 HariSenin Bootcamp (Fetch and review some basic react knowledges)
+Session 28 HariSenin Bootcamp / Practice React JS (Axios)
+Tutor: Kak Rizal
 
 Topic :
 - API Implementation
