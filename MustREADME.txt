@@ -1,22 +1,13 @@
-*REACT JS PART 4*
-Session 24 HariSenin Bootcamp
+PART 5 REACT JS
+Topic:
 
-Topic :
-- Hooks
-- Refs and The Dom 
+1. Introduction to TypeScript (I will skip this because I want to know JS better first)
+2. ESLint (Session 25 : 1:19:30)
 
-1. Hooks
-    - React has some of the built-in Hooks that we can use. 
-        check: https://react.dev/reference/react
-    - Type of Hooks in React:
-        a. State Hooks (Most used hooks)
-        b. Context Hooks
-        c. Ref Hooks (will learn about these at number 2)
-        d. Performance Hooks
-        e. Resource Hooks
-        f. Other Hooks (custom hooks)
-        g. Your own Hooks (custom hooks)
-    - Open readme-hooks.txt for more details.
 
-2. Refs and The Dom
-    - Refs is part of hooks
+2. ESLint (1:19:30)
+    - Open eslint.org >documentation > getting started 
+    - The main function is to find and fix the JavaScript code
+        - Make the our code consistent and prevents bugs
+    - Use ESLint in development phase (before we build the code)
+    - We can turn on and off the ESLint when we need it.
