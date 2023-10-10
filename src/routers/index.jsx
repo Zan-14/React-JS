@@ -12,6 +12,8 @@ import { UseReducerPage } from "../components/pages/useReducer-page";
 import Part5React from "../components/pages/part-5-reactjs";
 import Part6Redux from "../components/pages/part-6-redux";
 import Part7Api from "../components/pages/API/FetchPage";
+import AxiosPage from "../components/pages/API/AxiosPage";
+import DetailPage from "../components/pages/API/DetailPage";
 
 const Routers = () => {
   return (
@@ -31,6 +33,8 @@ const Routers = () => {
       <Route path="/part-5" element={<Part5React />} />
       <Route path="/part-6" element={<Part6Redux />} />
       <Route path="/part-7" element={<Part7Api />} />
+      <Route path="/part-7-axios" element={<AxiosPage />} />
+      <Route path="/part-7/detail/:id" element={<DetailPage />} />
       <Route path="/usereducer" element={<UseReducerPage />} />
     </Routes>
   );

@@ -75,6 +75,7 @@ Some terms in API:
     1. fetch()
         Open FetchPage.jsx
     2. axios()
+        Open AxiosPage.jsx
 
 *Indicator for successfully fetching data
     inspect > network > Fetch/XHR > Name > data name is there > status = 200
