@@ -1,26 +1,32 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-
+import { fetchProductById } from "../../../services/product.service";
 // import React from 'react'
 
 const DetailPage = () => {
   const [product, setProduct] = useState({});
   const params = useParams();
 
-  const getDetailProduct = async () => {
-    const response = await fetch(`https://dummyjson.com/products/${params.id}`);
+  // This section is moved into product.service.js
+  // const getDetailProduct = async () => {
+  //   const response = await fetch(`https://dummyjson.com/products/${params.id}`);
 
-    const data = await response.json();
-    if (data) {
-      setProduct(data);
-    }
-  };
+  //   const data = await response.json();
+  //   if (data) {
+  //     setProduct(data);
+  //   }
+  // };
 
   useEffect(() => {
-    if (params?.id) {
-      getDetailProduct();
-    }
+    // This is the syntax to replace the code below
+    fetchProductById(params?.id).then(data => {
+      setProduct(data);
+    });
+    // This is commented because we want to use the function from product.service.js
+    // if (params?.id) {
+    //   getDetailProduct();
+    // }
   }, [params?.id]);
 
   return (

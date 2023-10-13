@@ -90,6 +90,7 @@ Some terms in API:
             <button onClick={() => getApiProduct()}>Call the API</button>
 
     3. (Recommended) When the data will be fetched multiple times on different pages
-            - There is a way to prevent coding the async await function to get the data.
+            - There is a way to prevent coding the async await function to get the data on every page.
             - We need to create a new folder inside src named "services"
-                Go to part-8 branch!
+            - inside the folder, we will group the api based on the flow and type of data.
+            - In this case, the product data will become one file named product.service.js  (get product data, category, and details)
