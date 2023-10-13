@@ -6,6 +6,7 @@ Tutor: Kak Rizal
 Topic :
 - API Implementation
 
+
 Some terms in API:
  - endpoints:
     the last word in the URL is the endpoints.
@@ -87,3 +88,8 @@ Some terms in API:
         we add onClick inside the button and put the function that fetch the data.
         syntax:
             <button onClick={() => getApiProduct()}>Call the API</button>
+
+    3. (Recommended) When the data will be fetched multiple times on different pages
+            - There is a way to prevent coding the async await function to get the data.
+            - We need to create a new folder inside src named "services"
+                Go to part-8 branch!
